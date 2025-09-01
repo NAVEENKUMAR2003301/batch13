@@ -573,3 +573,166 @@ for(let hj in obj2){
     console.log(obj2[hj]);
     
 }
+
+console.clear()
+
+//function
+
+function abc(a){
+   console.log("i am a function",a);
+}
+
+abc("hello")
+
+function sum(a,b){
+    console.log(a+b);
+    
+}
+
+sum(10,30)
+
+
+let basic = {
+    name1 : "mani",
+    name2 : "ram"
+}
+
+function base(){
+    console.log(`the first name is : ${basic.name1}`);
+    console.log(`the second name is : ${basic.name2}`);
+}
+
+base()
+
+
+// scopes
+
+//var - global scope, function scope
+//let - block scope
+//const - block scope
+
+
+function scopes(){
+    if(true){
+        var a2 = "hello"
+    }
+    console.log(a2);
+    
+}
+scopes()
+
+
+console.log(hello);
+var hello = "global scope"
+
+
+
+function add(a,b){
+    console.log(a+b);    
+}
+
+add(20,20)
+
+// default parameter method
+
+// function form1(a,b,c="no"){
+//     console.log(`name is : ${a}, age is : ${b},disability : ${c}`)  
+// }
+
+// form1("navi",22)
+
+function sum(a,b){
+    return (a-b);
+}
+
+let stored = sum(10,1)
+
+console.log(stored);
+
+
+
+let name1 = "ram" // 1
+
+function named(callName){ //3 ram
+    return callName //4 ram
+}
+
+let a3 = named(name1) //2 ram
+
+console.log(a3);
+
+
+
+// function types /
+
+
+// named function
+
+named1()
+function named1(){
+    console.log("i am a named function");
+}
+
+// anonymous function
+
+var anonymous = function(){
+    console.log("i am a anonymous function"); 
+}
+anonymous()
+
+// arrow function
+
+let arrow =()=>{
+    console.log("i am a arrow function");    
+}
+arrow()
+
+
+
+
+
+let name2 = "mani"
+
+let arr = (a)=>{
+    return(`the employee name is ${a}`); 
+}
+let storeData = arr(name2)
+
+console.log(storeData);
+
+let ano = function(){
+  console.log(storeData+" stackly");
+}
+ano()
+
+
+console.clear();
+
+//higher order function
+//callback function
+
+function function1(){
+    console.log("i am a higher order function");  
+}
+
+function function2(){
+    console.log("i am a callback function"); 
+}
+
+function1(function2())
+
+
+let add1 = (callback,a,b)=>{// callback = sub,a=20, b=40
+    console.log(a+b) // 20+40
+      // sub(20,20)
+}
+
+let sub=(num1,num2)=>{ // num1=20,num2=20
+    console.log(num1-num2);  
+}
+
+add1(sub(20,20),20,40) // sub,20,40
+
+
+
+

@@ -591,3 +591,150 @@ for(let cd in obj2){
     console.log(obj2[cd]);
     
 }
+
+console.clear();
+
+
+// function
+
+
+
+function abc(){
+    console.log("new function");  
+}
+
+abc()
+
+
+
+let person1 = {
+    name1 : "john",
+    age : 22
+}
+
+function printAge(){
+    console.log(`Hello ${person1.name1}`); 
+}
+
+printAge()
+
+
+function paramUse(a,b,c="no"){
+    console.log("age ",a, "name ",b,"disability",c);
+}
+
+paramUse(44,"john")
+
+
+function returnVal(a,b){
+    return a*b
+}
+
+let returnVal1 = returnVal(10, 20);
+
+console.log(returnVal1);
+
+console.log(10*returnVal1);
+
+
+//var 
+//let
+//const
+
+
+
+function scopeCheck(){
+    if(true){
+        var hello = "i am a global scope"
+    }
+    console.log(hello);    
+}
+
+scopeCheck()
+
+// function types 
+
+// named function
+
+named()
+function named(){
+    console.log("i am a named function");   
+}
+
+
+
+// Anonymous function
+
+var Anonymous = function(){
+    console.log("i am a anonymous function");
+}
+Anonymous()
+
+
+
+// Arrow Function
+
+var Arrow = ()=>{
+    console.log("i am a arrow function"); 
+}
+Arrow()
+
+
+
+
+
+
+{
+    var ab = "hello"
+}
+
+console.log(ab);
+
+
+let employeeName = "ram"
+
+let empDetials = (empName)=>{
+    return `first employee name: ${empName}`
+}
+
+let EmpDetials1 = empDetials(employeeName)
+
+console.log(EmpDetials1);
+
+console.clear();
+
+
+//Higher order function
+//callback function
+
+function function1(){
+    console.log("higher order function"); 
+}
+
+function function2(){
+    console.log("callback function");
+}
+
+function1(function2())
+
+
+function add(callback,a,b){
+    console.log(a+b);
+    callback(20,20)   
+}
+function sub(num1,num2){
+    console.log(num1-num2);
+}
+add(sub,20,40)
+
+
+function mul(a,b,div){
+    console.log(a+b);
+    div(1,100)
+}
+
+function modulus(a,b){
+    console.log(a-b); 
+}
+
+mul(10,20,modulus)
