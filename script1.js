@@ -1,5 +1,7 @@
 // variables 
 
+
+
 // 3 types
 
 //1.var
@@ -735,4 +737,138 @@ add1(sub(20,20),20,40) // sub,20,40
 
 
 
+console.clear();
 
+//uncurrying function
+
+function add(a,b,c){
+    console.log(a+b+c);   
+}
+
+add(10,20,30)
+
+
+// currying function
+
+
+function add11(a){
+   return function(b){
+     return function(c){
+        console.log(a+b+c); 
+     }
+   }
+}
+
+add11(10)(20)(30)
+
+
+  // self invoke function
+
+//   (function () {
+//     alert("hello this discount on now 50off");
+//   })();
+
+
+// generator function
+
+function*genFun(){
+    yield "one value"
+    yield "two value"
+    yield "three value"
+    yield "fourth value"
+}
+
+let storegen = genFun()
+
+console.log(storegen.next().value);
+console.log(storegen.next());
+console.log(storegen.next());
+console.log(storegen.next());
+console.log(storegen.next());
+
+console.clear();
+
+
+// data structure
+
+// array
+
+let fruits = ["apple",,"orange","banana","graph",1,2,true,[1,2],{hello:2}]
+
+console.log(fruits);
+console.log(fruits[1]);
+console.log(fruits[fruits.length-1]);
+
+
+// multiple value we can store in array
+// we can hold inside the value different dataTypes
+// homogeneous
+// hetrogeneous
+// flexible
+
+// object 
+
+let employeeDetials = {
+    eName : "mani",
+    age : 22,
+    knownLanuage : ["html","css","js"],
+    levelOfLanuage : {
+        html : "advanced",
+        css : "advanced",
+        js : "learning"
+    },
+    ifCompleteTrainig : function(){
+        console.log("certificate");
+        
+    }
+}
+
+console.log(employeeDetials.eName);
+console.log(employeeDetials.age);
+console.log(employeeDetials.knownLanuage[1]);
+console.log(employeeDetials.levelOfLanuage.js);
+
+employeeDetials.ifCompleteTrainig();
+
+
+// iteration
+
+
+// for loop
+// for of - array,string,function
+// for in - object
+
+let arr1 = [10,20,30,40,50]
+
+for(let i=0;i<=arr1.length-1;i++){
+    console.log(arr1[i]);  
+}
+
+console.clear();
+
+let arr12 = [1,2,3,4,5,6]
+let str12 = "javascript"
+
+function*gen(){
+    yield 1
+    yield 2
+    yield 3
+}
+
+let store = gen()
+
+let obj12 = {
+    ename : "a",
+    age : 12,
+    is : true
+}
+
+
+for (let one of store) {
+  console.log(one);
+}
+
+for(let two in obj12){
+    console.log(obj12[two]);
+    
+}
