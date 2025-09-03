@@ -872,3 +872,145 @@ for(let two in obj12){
     console.log(obj12[two]);
     
 }
+
+
+console.clear();
+
+
+// es6 edition
+
+// spread opretor
+
+// array   -  [...]
+
+// object  -   {...}
+
+// two arr or two obj we can merge and clone
+
+
+
+let one = ["apple","orange","banana"]
+
+let two = ["potato","brinjal","carrot"]
+
+
+let All = [...one,...two,"graps"]
+
+
+console.log(All);
+
+
+
+let obj1 = {
+    eName : "a",
+    eId   :  "123Ab",
+    eRole : "trainee"
+}
+
+let obj21 = {
+    eName1 : "b",
+    eId1   : "ABC12",
+    eRole1 :"developer"
+}
+
+
+
+let AllEmpDetials = {...obj1,...obj21} 
+
+console.log(AllEmpDetials);
+
+// rest operator
+
+// function - (...)
+
+// we can multiple argument store
+
+function rest(a,b,c,d,e,...f){
+    console.log(d,e,f);
+     
+}
+
+rest(1,2,3,4,5,6,7,8,9)
+
+console.clear();
+
+
+/// destracture
+
+
+let sample = [10,20,30,40]
+
+console.log(sample[1]);
+
+let firstVal = sample[3]
+
+console.log(firstVal+firstVal);
+
+// destracture
+
+let [b1,b2,b3,b4] = sample
+
+console.log(b1,b2,b3,b4);
+console.log(b1+b4);
+
+let multiArr = [10,20,30,40,1,2,3,4,5,6]
+
+
+let [c1,c2,c3,...c4]=multiArr
+
+console.log(c1);
+console.log(c4);
+
+let sum1=0
+
+for(let calc of c4){
+    sum1 = 40 + calc
+    console.log(sum1);  
+}
+
+console.clear();
+
+
+let nestedArr = [10,20,[30,40,[50]]]
+
+let [d1,d2,[d3,d4,[d5]]]=nestedArr
+
+console.log(d5);
+
+console.clear();
+
+// array manipulate method
+
+
+// push()  --> last add [if you use add method means you can multiple value add]
+
+// pop()   --> last remove [if use to remove only single value can remove]
+
+// shift()  --> first remove
+
+// unshift() --> first add
+
+// splice() --> inside we can add / remove
+
+let simple = [1,2,3,4]
+
+simple.push(5,6,7,8)
+
+simple.pop()
+
+simple.shift()
+
+simple.unshift(0,1)
+
+
+
+console.log(simple);
+
+
+// splice(starting index,delete count, adding)
+
+let mu = [10,20,30,40]
+
+mu.splice(1,2,2,3)
+
+console.log(mu);

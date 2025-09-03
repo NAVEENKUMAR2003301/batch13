@@ -807,3 +807,141 @@ let obj11 = {
 for(let two in obj11){
     console.log(obj11[two]);
 }
+
+console.clear();
+
+
+// es6 edition
+
+
+
+
+
+// spread operator
+
+// array - [...]
+
+// object - {...}
+
+// two array or two obj merge and clone
+
+
+
+let one = ["criket","volleyball","baseball"]
+let two = ["need for race","god of war","rumble race"]
+
+let games = [...one,...two,"pubg"]
+
+
+console.log(games);
+
+
+let obj1 = {
+  ename : "a",
+  eId   : "123Ab",
+  eRole : "trainee"
+}
+
+let obj21 = {
+  ename1  : "b",
+  eId1    : "Ab12",
+  eRole1  : "developer"
+}
+
+
+let storeEmployeeData = {...obj1,...obj21}
+
+
+console.log(storeEmployeeData);
+
+
+// rest operator
+
+// function - (...)
+
+// multiple argument store
+
+
+
+function rest(...d){
+  console.log(a+b+c);
+  console.log(d);
+   
+}
+
+rest(1,2,3,4,5,6,7,8,9)
+
+
+
+// destracture
+
+
+let arr1 = [10,20,30,40]
+
+console.log(arr1[1]);
+
+
+let fVal = arr1[0]
+
+console.log(fVal);
+
+
+// destracture
+
+let [a1,,,d1] = arr1
+
+console.log(a1,d1);
+
+
+let arr2 = [10,20,30,40,50,60,1,2,3,4]
+
+
+
+let [a2,b2,c2,...d2] = arr2
+
+console.log(d2);
+
+
+console.clear()
+
+
+/// array manipulate methods
+
+
+// push() --> last add [add means mulitiple elaments can add ]
+
+// pop()  --> last remove [remove means single elements only]
+
+// shift() --> first remove
+
+// unshift() --> first add
+
+// splice() --> inbetween add or remove
+
+let sample = [1,2,3,4,5]
+
+sample.push(6,7,8,9)
+
+sample.pop()
+
+sample.shift()
+
+sample.unshift(0,1)
+
+console.log(sample);
+
+
+// splice(starting index,delete count,add value)
+
+
+sample.splice(0,2,-1,0,1)
+
+console.log(sample);
+
+
+let simple = [1,2,3,4]
+
+simple.splice(1,2,10,20)
+
+console.log(simple);
+
