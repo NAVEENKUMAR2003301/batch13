@@ -1014,3 +1014,364 @@ let mu = [10,20,30,40]
 mu.splice(1,2,2,3)
 
 console.log(mu);
+
+console.clear();
+
+
+
+// merge method
+
+// concat()
+// slice()
+// flat()
+// fill()
+
+
+// 1. concat method
+
+
+let one1 = [1,2,3,4]
+let two1 = [5,6,7,8]
+
+let total = one1.concat(two1)
+
+console.log(total);
+
+// 2.slice
+
+let three = [1,2,3,4,5,6]
+
+let threeVal = three.slice(1,4)
+
+console.log(threeVal);
+
+
+// 3.flat 
+
+let four = [1,2,[3,[4,[5,[6]]]]]
+
+let fourVal = four.flat(Infinity)
+
+console.log(fourVal[5]);
+
+
+// 4.fill()
+
+let five = [1,2,3,4] // 1,2,3,"four"
+
+five.fill("four",3,4)  // value,si,ei
+
+console.log(five);
+
+
+// sort
+
+let six = ["A",3,4,1,2,5,"a",7,11,111111111111111,[3,5]]
+
+let sixVal = six.flat()
+sixVal.sort()
+
+console.log(sixVal);
+
+
+// reverse 
+
+let seven = [4,5,1,2,3]
+
+seven.reverse()
+
+console.log(seven);
+
+
+// includes 
+
+let eight = [1,5,9,7,5]
+
+let eightVal = eight.includes(91)
+
+console.log(eightVal);
+
+
+// covert arr to str
+
+
+// join()  // toString
+
+
+let nine = [7,8,5,4]
+
+let nineVal = nine.join()
+
+console.log(nineVal);
+
+
+let ten = [5,7,8]
+
+let tenVal = ten.toString()
+
+console.log(tenVal);
+
+
+// index of
+
+let eleven = [10,20,30,40,10]
+
+console.log(eleven.indexOf(10));
+
+// lastIndexOf 
+
+console.log(eleven.lastIndexOf(10));
+
+console.clear();
+
+
+// higher order method
+
+// 1.forEach()
+// 2.map()
+// 3.filter()
+// 4.find()
+// 5.reduce()
+
+
+let toys = ["cars","bikes","puzzles","ladder games"]
+
+// forEach()
+
+
+let hello11 = toys.forEach((c,i,t)=>{
+    return(c);  
+})
+
+console.log(hello11);
+
+
+// map()
+
+let hello12 = toys.map((c,i,to)=>{
+    return(c);  
+})
+
+console.log(hello12);
+
+
+// filter
+
+let employee = [
+    {eName : "a", salary : 100000},
+    {eName : "b", salary : 200000},
+    {eName : "c", salary : 300000}
+]
+
+
+let salaryDate = employee.filter((c,i,to)=>{
+return c.salary > 100000
+})
+
+console.log(salaryDate);
+
+// find
+
+let salaryFirstEmployee = employee.find((a,b,c)=>{
+return a.salary >= 100000
+})
+
+console.log(salaryFirstEmployee);
+
+// reduce
+
+
+// let count = 0
+//  for(let i=0; i<guessCountNum.length ; i++){
+    //     count = count + guessCountNum[i]
+    // } 
+    // console.log(count);
+    
+    let guessCountNum = [1,2,3,4,5]
+
+var counted = guessCountNum.reduce((acc,c,i,to)=>{
+    return acc + c // 0 + 1 = 1 // 1 + 2 = 3 // 3 + 3 = 6 // 6+4 = 10
+    // 10 + 5 = 15 // 15 + 0 = 15
+},10) // 1 // 3 // 6 // 10 // 15
+
+console.log(counted);
+
+
+
+
+
+
+
+
+
+
+
+console.clear();
+
+// higher order function
+
+// sort
+
+
+let hum1 = [9,4,5,2,8,1,10]
+
+// 1 2 4 5 8 9 10 
+
+let sortVal = hum1.sort()
+
+console.log(sortVal);
+
+
+// higher order sort method
+
+
+let hSortVal = hum1.sort((a,b)=>{
+return b-a
+})
+
+console.log(hSortVal);
+
+// some - logical or
+
+
+
+let someArr = [1,7,3,5]
+
+let someVal = someArr.some((c,i,to)=>{
+    return c%2==1// 1%2==1->true, 2%2==1->false, 3%2==1-> true,5%2==1->true
+}) 
+//true || false || true || true = true
+console.log(someVal);
+
+
+// every - logical And
+
+let everyVal = someArr.every((c,i,to)=>{
+    return i%2==1 // 0%2==1-->false, true, false, true
+})
+
+// false && true && false && true = false 
+
+console.log(everyVal);
+
+
+console.clear();
+
+
+// string methods
+
+
+// charAt
+
+
+let str = "javascript"
+
+let charAtVal = str.charAt(0)
+
+console.log(charAtVal);
+
+
+// charCodeAt
+
+let CharCodeAtVal = str.charCodeAt(2)
+
+console.log(CharCodeAtVal);
+
+// includes
+
+let includesVal = str.includes("k")
+
+console.log(includesVal);
+
+// indexOf
+
+
+let indexOfVal = str.indexOf("a",2)
+
+console.log(indexOfVal);
+
+
+// lastIndexOf
+
+let lastIndexOfVal = str.lastIndexOf("a",2)
+
+console.log(lastIndexOfVal);
+
+
+str = "javascript"
+// repeat 
+
+let strVal = str.repeat(10)
+
+console.log(strVal);
+
+// replace
+
+let newstr = "js is a dynamic"
+
+let replaceVal = newstr.replace("js","javascript")
+
+console.log(replaceVal);
+
+// slice 
+
+
+
+let sliceVal = str.slice(4,10)
+
+console.log(sliceVal);
+
+
+// split
+
+let newString = "iron-man hello world"
+
+let splitVal = newString.split("o")
+
+console.log(splitVal);
+
+// startswidth
+
+str = "javascript"
+
+let startswidthVal = str.startsWith("j")
+
+console.log(startswidthVal);
+
+// endwidth
+
+let endsWidthVal = str.endsWith("t")
+
+console.log(endsWidthVal);
+
+let ran = "aNImal" // NIMAL
+
+// toLowercase
+
+let lowerVal = ran.toLowerCase()
+
+console.log(lowerVal);
+
+// toUppercase
+
+let upperVal = ran.toUpperCase()
+
+console.log(upperVal);
+
+let slice1 = upperVal.slice(1,6)
+
+console.log(slice1);
+
+
+
+
+console.clear();
+
+
+let hum = [2, 3, 4, 8, 10,11];
+
+for (let i=0; i<hum.length;i++) {
+  if(hum[i]%2==1){
+    console.log(hum[i]);
+  }
+}

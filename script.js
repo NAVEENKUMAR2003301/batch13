@@ -945,3 +945,313 @@ simple.splice(1,2,10,20)
 
 console.log(simple);
 
+console.clear();
+
+
+// array merge method
+
+// 1. concat() r
+// 2. slice() r
+// 3. flat() r
+// 4. fill()
+// 5. sort()
+// 6. reverse()
+// 7. includes() r
+// 8. indexOf()
+// 9. lastIndexOf()
+// 10.join() / toString()
+
+
+// concat ()
+
+let one1 = [1,2,3,4]
+let one2 = [5,6,7,8]
+
+let mergeArr = one1.concat(one2,9)
+
+console.log(mergeArr);
+
+// slice()
+
+let two1 = [1,2,3,4,5]
+
+let twoVal = two1.slice(1,4)
+
+console.log(twoVal);
+
+
+// flat()
+
+let three = [1,2,3,[4,[5,[6]]]] 
+
+let threeVal = three.flat(Infinity)
+
+console.log(threeVal);
+
+// fill()
+
+let four = [1,2,3,4] // 1,2,3,"four"
+
+four.fill("four",3,4) // value,si,ei
+
+console.log(four);
+
+
+// sort()
+
+let five = ["A",2,5,3,1,7,"a",9,0,100,10001]
+
+let fiveVal = five.sort()
+
+console.log(fiveVal);
+
+
+// reverse()
+
+let six = [1,2,3,4,2]
+
+six.reverse()
+
+console.log(six);
+
+// includes()
+
+let seven = [10,20,30,40]
+
+let sevenVal = seven.includes(40)
+
+console.log(sevenVal);
+
+
+// indexOf
+
+let eight = [1,2,3,2,5]
+
+console.log(eight.indexOf(2,2));
+
+
+// lastIndexOf
+
+console.log(eight.lastIndexOf(2,2));
+
+
+// join(), toString . arr to str
+
+let nine = [1,2,3,4,5,6]
+
+let nineVal = nine.join()
+
+console.log(nineVal);
+
+let ten = [1,2,2,1,1,2]
+
+let tenVal = ten.toString()
+
+console.log(tenVal);
+
+
+console.clear();
+
+// array higher order method
+
+// forEach()
+// map()
+// filter()
+// find()
+// reduce()
+
+
+let eleven = ["one","two","three","four","five"]
+
+// forEach()
+
+let value = eleven.forEach((cEle,ind,total)=>{
+  return(cEle);
+})
+
+console.log(value);
+
+// map()
+
+let value1 = eleven.map((c,ind,to)=>{
+  return(c);
+})
+
+console.log(value1);
+
+// filter()
+
+let emp = [
+  {ename : "a", salary : 100000},
+  {ename : "b", salary : 200000},
+  {ename : "c", salary : 300000}
+]
+
+let salaryDate = emp.filter((c,i,t)=>{
+return c.salary > 100000
+})
+
+console.log(salaryDate);
+
+
+var firstEmp = emp.find((c,i,t)=>{
+  return c.salary > 100000
+})
+
+console.log(firstEmp);
+
+
+// reduce
+
+
+let calc = [1,2,3] 
+
+let reduceMethod=calc.reduce((acc,cle,i,to)=>{
+return acc + cle // 0 + 1 = 1 // 1 + 2 = 3 // 3 + 3 = 6 // 6 
+},0) // 1 // 3 // 6
+
+console.log(reduceMethod);
+
+
+
+console.clear();
+
+
+// higher order function
+
+// sort 
+
+
+let sortAgain = [9,4,2,11,5,6,333]
+// 2 4 5 6 9 11 333
+let sortFinalVal = sortAgain.sort()
+
+console.log(sortFinalVal);
+
+
+let newSort = sortAgain.sort((a,b)=>{
+return b-a
+})
+
+console.log(newSort);
+
+// some - logical or
+
+let sample1 = [2,2,2,2]
+
+let valSome = sample1.some((c,i,t)=>{
+return c%2==1 // 1%2==1-> true false true false
+})
+
+// true || false || true || false = true
+
+console.log(valSome);
+
+
+// every - logical And
+
+
+let valEvery = sample1.every((c,i,to)=>{
+return i%2==0 // 0%2==0->true, 1%2==0->false
+})
+
+console.log(valEvery);// 
+
+console.clear();
+
+// string methods
+
+// CharAt
+
+let string1  = "javascript"
+
+let stringCharAtVal = string1.charAt(2)
+
+console.log(stringCharAtVal);
+
+
+//CharCodeAt
+
+let CharCodeAtVal = string1.charCodeAt(1)
+
+console.log(CharCodeAtVal);
+
+
+// includes
+
+let includesVal = string1.includes("A")
+
+console.log(includesVal);
+
+
+// indexOf
+
+let indexOfVal = string1.indexOf("a",2)
+
+console.log(indexOfVal);
+
+
+// lastIndexOf
+
+let lastIndexOfVal = string1.lastIndexOf("a",7)
+
+console.log(lastIndexOfVal);
+
+
+// repeat
+
+let repeatVal = string1.repeat(10)
+
+console.log(repeatVal);
+
+let ant = "js is a dynamic launguage" 
+// replace
+
+let replaceVal = ant.replace("js","javascript")
+
+console.log(replaceVal);
+
+
+// slice
+
+let sliceVal = string1.slice(2,5)
+
+console.log(sliceVal);
+
+
+// split
+
+let ironMan = "iron-man hello world"
+
+let splitVal = ironMan.split("o")
+
+console.log(splitVal);
+
+// startswidth
+
+string1 = "javascript"
+
+let startVal = string1.startsWith("J")
+
+console.log(startVal);
+
+// endsWidth
+
+let endsWidthVal = string1.endsWith("t")
+
+console.log(endsWidthVal);
+
+
+// lowercase
+
+let lower = "AniMal"
+
+let lowerVal = lower.toLowerCase()
+
+console.log(lowerVal);
+
+// uppercase
+
+let uppercaseVal = lower.toUpperCase()
+
+console.log(uppercaseVal);
