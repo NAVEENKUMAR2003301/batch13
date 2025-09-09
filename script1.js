@@ -1375,3 +1375,192 @@ for (let i=0; i<hum.length;i++) {
     console.log(hum[i]);
   }
 }
+
+
+console.clear();
+
+
+// let hello = 12
+
+// while(hello>=90){
+//     console.log("hello");
+//     hello++
+// }
+
+
+// let dos = 10
+
+// do{
+//     console.log("hello"); dos++
+    
+// }
+// while(dos>=22)
+
+// Math method
+
+
+// Math.abs()
+
+let finalVal = -300
+
+console.log(-300);
+
+
+console.log(Math.abs(finalVal));
+
+// Math.sign()
+
+console.log(Math.sign(-68668975));
+console.log(Math.sign(68665));
+console.log(Math.sign(0));
+
+// Math.sqrt()
+
+console.log(Math.sqrt(997));
+
+// Math.cbrt()
+
+console.log(Math.cbrt(8));
+
+// Math.pow()
+
+console.log(Math.pow(5,3)); //5^3 = 5*5*5 = 125
+
+// Math.min()
+
+let min = [34,54,22,18,6,90]
+
+console.log(Math.min(...min));
+
+// Math.max()
+
+console.log(Math.max(...min));
+
+// Math.random()
+
+console.log(Math.random()*10);
+
+
+// tofixed
+
+let random = Math.random()*10
+
+console.log(random.toFixed(3));
+
+
+// ceil()
+
+console.log(random);
+
+console.log(Math.ceil(random));
+
+// floor()
+
+console.log(Math.floor(random));
+
+
+// round()
+
+console.log(Math.round(random));
+
+
+// trunc()
+
+console.log(Math.trunc(random));
+
+
+console.clear();
+
+
+// date object
+
+let date = new Date
+
+console.log(date);
+
+
+// get
+
+// getFullYear()
+
+console.log(date.getFullYear());
+
+// getMonth()
+
+console.log(date.getMonth());
+
+// getDay()
+
+console.log(date.getDay());
+
+// getDate()
+
+console.log(date.getDate());
+
+// getHours()
+
+console.log(date.getHours());
+
+// getMinutes()
+
+console.log(date.getMinutes());
+
+// getSeconds()
+
+console.log(date.getSeconds());
+
+
+
+// set
+
+
+console.log(date);
+
+// setFullYear
+
+date.setFullYear(2000)
+
+console.log(date);
+
+// setmounth
+
+date.setMonth(0)
+
+console.log(date);
+
+// setDate()
+
+date.setDate(30)
+
+console.log(date);
+
+
+//local time
+
+
+
+console.log(date.toLocaleTimeString());
+
+console.log(date.toLocaleDateString());
+
+
+console.log(date.toLocaleString());
+
+
+// date / month / year
+
+
+let date1 = new Date
+
+let datee = date1.getDate()
+
+let month = date1.getMonth()+1
+
+let monthVal = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"]
+
+let finalMonth = monthVal[month]
+
+let year = date1.getFullYear()
+
+console.log(`${datee} / ${month} / ${year} `);
+

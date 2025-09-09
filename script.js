@@ -1255,3 +1255,152 @@ console.log(lowerVal);
 let uppercaseVal = lower.toUpperCase()
 
 console.log(uppercaseVal);
+
+console.clear();
+
+// Math.object 
+
+
+// Math.abs()
+
+console.log(Math.abs(-500));
+
+// Math.sign()
+
+console.log(Math.sign(-400));
+console.log(Math.sign(400));
+console.log(Math.sign(0));
+
+
+// Math.sqrt()
+
+console.log(Math.sqrt(64));
+
+
+// Math.cbrt()
+
+console.log(Math.cbrt(125));
+
+// Math.pow()
+
+console.log(Math.pow(5,3));
+
+// Math.min()
+
+let min = [11,23,45,3,65]
+
+console.log(Math.min(...min));
+
+
+// Math.max()
+
+console.log(Math.max(...min));
+
+
+// Math.random()
+
+console.log(Math.random());
+
+let random = Math.random()*10
+
+console.log(random);
+console.log(random.toFixed(1));
+
+console.log(random);
+
+// Math.ceil()
+
+console.log(Math.ceil(random));
+
+// Math.floor()
+
+console.log(Math.floor(random));
+
+// Math.round()
+
+console.log(Math.round(random));
+
+// Math.trunc()
+
+console.log(Math.trunc(random));
+
+
+console.clear();
+
+
+// date
+
+// get
+
+let date = new Date
+
+console.log(date);
+
+
+// get year
+
+console.log(date.getFullYear());
+
+// get month
+
+console.log(date.getMonth());
+
+// get Date
+
+console.log(date.getDate());
+
+// get hours
+
+console.log(date.getHours());
+
+// get minutes
+
+console.log(date.getMinutes());
+
+// get seconds
+
+console.log(date.getSeconds());
+
+// get day
+
+console.log(date.getDay());
+
+
+// set 
+
+
+date.setFullYear(2023)
+
+console.log(date);
+
+date.setMonth(0)
+
+console.log(date);
+
+date.setDate(3)
+
+console.log(date);
+
+date.setHours(12)
+
+console.log(date);
+
+// local time
+
+let date1 = new Date
+
+console.log(date1.toLocaleTimeString());
+
+console.log(date1.toLocaleString())
+
+console.log(date1.toDateString());
+
+
+date1.setFullYear(prompt("what is your birth year"))
+date1.setDate(prompt("enter your birth date"))
+date1.setMonth(Number(prompt("enter your birth month"))-1)
+let findDay = date1.getDay()
+
+let day = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+
+console.log(day[findDay]);
